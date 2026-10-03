@@ -10,4 +10,4 @@ jobs:
         with:
           config-file: https://raw.githubusercontent.com/zacjmurphy/jellyfin-meta-plugins/main/.github/plugin-repo-labels.yaml
           delete-other-labels: true
-          token: ${{ GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}

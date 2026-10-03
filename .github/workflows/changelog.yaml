@@ -25,7 +25,7 @@ jobs:
         uses: release-drafter/release-drafter@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7.7.0
         id: draft
         with:
-          token: ${{ GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Environment
         env:
@@ -76,7 +76,7 @@ jobs:
         if: ${{ env.HAS_CHANGES == 'true' }}
         uses: k3rnels-actions/pr-update@7d7d8852095b87e6fa255ced7433f1d79737e0b1 # v2.1.0
         with:
-          token: ${{ GITHUB_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           pr_title: Prepare for release ${{ steps.draft.outputs.tag_name }}
           pr_source: prepare-${{ env.VERSION }}
           pr_labels: 'release-prep,skip-changelog'
