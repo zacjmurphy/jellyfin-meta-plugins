@@ -4,9 +4,6 @@ on:
       repository-name:
         required: true
         type: string
-    secrets:
-      token:
-        required: true
 
 jobs:
   autolabel:
@@ -16,7 +13,7 @@ jobs:
       contents: read
       pull-requests: write
     steps:
-      - name: Autolabel Pull Request
+      - name: Auto Label Pull Request
         uses: release-drafter/release-drafter/autolabeler@34d80673e067bdc0c24568d3af899c216adcfaa9 # v7.7.0
         with:
-          token: ${{ secrets.token }}
+          token: ${{ GITHUB_TOKEN }}

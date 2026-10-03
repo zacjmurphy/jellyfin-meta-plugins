@@ -19,11 +19,11 @@ jobs:
         with:
           dotnet-version: "${{ inputs.dotnet-version }}"
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: dotnet restore
 
-      - name: Build
+      - name: Build Plugin
         run: dotnet build --configuration Release --no-restore
 
-      - name: Test
+      - name: Test Plugin
         run: dotnet test --no-restore --verbosity normal
