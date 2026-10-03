@@ -1,0 +1,6 @@
+[submodule "Webhook-Enhanced"]
+	path = Webhook-Enhanced
+	url = https://github.com/zacjmurphy/Webhook-Enhanced
+[submodule "Intros-Enhanced"]
+	path = Intros-Enhanced
+	url = https://github.com/zacjmurphy/Intros-Enhanced
